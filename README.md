@@ -1,4 +1,4 @@
-# QR Certificate Generator
+# QR Certificate Generator RC
 
 A web application built with Next.js and FastAPI that allows you to generate verifiable certificates with QR codes. This tool helps organizations create, manage, and verify digital certificates efficiently.
 
