@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Certificate Verification System</title>
+      <style>
+        body {
+          font-family: system-ui, -apple-system, sans-serif;
+          line-height: 1.5;
+          margin: 0;
+          padding: 0;
+          color: #333;
+          background-color: #f9f9f9;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 2rem;
+          text-align: center;
+        }
+        h1 {
+          color: #2563EB;
+        }
+        .search-box {
+          margin: 2rem 0;
+        }
+        input {
+          padding: 0.75rem 1rem;
+          width: 100%;
+          max-width: 500px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 1rem;
+        }
+        .instructions {
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 2rem;
+          margin: 2rem 0;
+          text-align: left;
+        }
+        footer {
+          margin-top: 2rem;
+          color: #6B7280;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Certificate Verification System</h1>
+        <p>Scan the QR code on your certificate or enter the certificate ID below to verify authenticity.</p>
+        
+        <div class="search-box">
+          <input type="text" id="certificate-id" placeholder="Enter certificate ID...">
+        </div>
+        
+        <div class="instructions">
+          <h2>How to verify your certificate</h2>
+          <ol>
+            <li>Locate the QR code on your certificate.</li>
+            <li>Use your smartphone to scan the QR code, which will bring you directly to the verification page.</li>
+            <li>Alternatively, enter the certificate ID in the search box above.</li>
+            <li>The verification page will show all details of your certificate to confirm its authenticity.</li>
+          </ol>
+        </div>
+        
+        <footer>
+          © 2025 Certificate Verification System
+        </footer>
+      </div>
+      
+      <script>
+        document.getElementById('certificate-id').addEventListener('keyup', function(event) {
+          if (event.key === 'Enter') {
+            const id = this.value.trim();
+            if (id) {
+              window.location.href = '/verify/' + id + '.html';
+            }
+          }
+        });
+      </script>
+    </body>
+    </html>
+  
