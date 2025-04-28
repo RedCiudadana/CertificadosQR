@@ -1,89 +1,233 @@
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Certificate Verification System</title>
-      <meta name="description" content="Verify the authenticity of digital certificates">
-      <style>
-        body {
-          font-family: system-ui, -apple-system, sans-serif;
-          line-height: 1.5;
-          margin: 0;
-          padding: 0;
-          color: #333;
-          background-color: #f9f9f9;
-        }
-        .container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 2rem;
-          text-align: center;
-        }
-        h1 {
-          color: #2563EB;
-        }
-        .search-box {
-          margin: 2rem 0;
-        }
-        input {
-          padding: 0.75rem 1rem;
-          width: 100%;
-          max-width: 500px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 1rem;
-        }
-        .instructions {
-          background-color: white;
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 2rem;
-          margin: 2rem 0;
-          text-align: left;
-        }
-        footer {
-          margin-top: 2rem;
-          color: #6B7280;
-        }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <h1>Certificate Verification System</h1>
-        <p>Scan the QR code on your certificate or enter the certificate ID below to verify authenticity.</p>
-        
-        <div class="search-box">
-          <input type="text" id="certificate-id" placeholder="Enter certificate ID...">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification System</title>
+    <meta name="description" content="Verify the authenticity of digital certificates">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/redciudadana.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+  <body>
+      <!-- Preloader Start -->
+      <!-- <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="/assets/img/red/loader.gif" style="width:50%;height:auto;margin:auto" alt="" />
+                </div>
+            </div>
         </div>
-        
-        <div class="instructions">
-          <h2>How to verify your certificate</h2>
-          <ol>
-            <li>Locate the QR code on your certificate.</li>
-            <li>Use your smartphone to scan the QR code, which will bring you directly to the verification page.</li>
-            <li>Alternatively, enter the certificate ID in the search box above.</li>
-            <li>The verification page will show all details of your certificate to confirm its authenticity.</li>
-          </ol>
+     </div> -->
+    
+    <!-- header-start -->
+    <header class="default-header"><!--header-transparent-->
+      <div class="main-menu-area menu-2 pl-155 pr-115">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center padmen " id="menu">
+            <div class="col-xl-2 col-lg-3 p0">
+                <div class="logo">
+                    <a href="/index.html"><img src="assets/img/LOGO-RED_NEGRO.png" alt="Logo Red Ciudadana" style="margin: 0 5%;" /></a>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-9" >
+              <div class="main-menu f-left ml-120">
+                <nav id="mobile-menu">
+                  <ul class="nav-items">
+                    <li id="inicio"><a href="/index.html">INICIO</a> </li>
+                    <li><a href="/nosotros/index.html">NOSOTROS</a> </li>
+                    <li><a href="#">PROYECTOS</a>
+                        <ul class="sub-menu">
+                            <li><a href="/programas/index.html">PROGRAMAS</a></li>
+                            <li><a href="/proyectos/index.html">PROYECTOS</a></li>
+                        </ul>
+                    </li>
+                    <!--li><a href="/eventos/index.html">EVENTOS</a></li-->
+                    <li><a href="#">PUBLICACIONES</a>
+                        <ul class="sub-menu">
+                            <li><a href="/publicaciones/index.html">PUBLICACIONES</a></li>
+                            <li><a href="/mediciones/index.html">MEDICIONES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">NOVEDADES</a>
+                        <ul class="sub-menu">
+                            <li><a href="/blogs/index.html">NOVEDADES</a></li>
+                            <li><a href="/oportunidades/index.html">OPORTUNIDADES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contacto/index.html">CONTACTO</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 d-none d-xl-block flex-container2">
+              <div class="header-02-wrapper">
+                  
+                <div class="header-lang mr-10 pos-rel f-right">
+                  <div class="lang-icon traduccion">
+                    <img width="22%" src="/assets/img/red/BANDERA.png" alt="Red Ciudadan Ingles">
+                    <a class="notranslate" href="https://redciudadana-org.translate.goog/index.html?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=es&_x_tr_pto=wapp">En </a>
+                    <span>|</span>
+                    <a class="notranslate" href="https://redciudadana.org/">Es </a>
+                  </div>
+                </div>
+                <div class="header-icon header-02-icon f-right">
+                  <a target="_blank" href="https://www.instagram.com/redxguate/"><i class="fab fa-instagram "></i></a>
+                  <a target="_blank" href="https://www.tiktok.com/@redxguate"><i class="fa-brands fa-tiktok"></i></a>
+                  <a target="_blank" href="https://twitter.com/redxguate"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a target="_blank" href="https://www.facebook.com/Redciudadanagt"><i class="fab fa-facebook-f"></i></a>
+                  <a target="_blank" href="https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg"><i class="fab fa-youtube"></i></a>
+                </div>
+                  
+              </div>
+            </div>
+            
+            <div class="col-12">
+              <div class="mobile-menu"></div>
+            </div>
+          </div>
         </div>
-        
-        <footer>
+      </div>
+    </header>
+      
+    <!-- Banner principal -->
+    <div class="banner" style="background-image: url('assets/img/VRED-SLIDER.png'); background-size: cover;">
+      <h1 class="display-5 fw-bold">Verificación de Certificados</h1>
+      <p class="lead text-white">Ingresa el código ID de tu certificado y verifica su autenticidad</p>
+      <div class="centered-image">
+        <img src="assets/img/VRED-04.png"/>
+      </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div style="background-color: #eff0f4;">
+      <div class="container py-5">
+  
+        <!-- Buscador -->
+        <div class="row justify-content-center mb-5" >
+          <div class="col-md-12" style="background-color: #fff;">
+            <div class="input-group search-box">
+              <input type="text" class="form-control" placeholder="Ingresa el ID del certificado...">
+              <button class="btn btn-dark" type="button">Verificar →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pasos para verificación -->
+        <div class="row" style="background-color: #fff; padding-top: 20px;">
+          <div class="col-lg-12">
+            <h2 class="my-4 text-center">Pasos para la verificación de certificados</h2>
+            <div class="row text-center">
+              <div class="col-md-4 mb-4">
+                <img src="assets/img/VRED-01.png" alt="Paso 1" width="50">
+                <h5 class="mt-3">Paso 1</h5>
+                <p>Busca el número de 4 dígitos en tu certificado</p>
+              </div>
+              <div class="col-md-4 mb-4">
+                <img src="assets/img/VRED-02.png" alt="Paso 2" width="50">
+                <h5 class="mt-3">Paso 2</h5>
+                <p>Ingresa el código en el buscador</p>
+              </div>
+              <div class="col-md-4 mb-4">
+                <img src="assets/img/VRED-03.png" alt="Paso 3" width="50">
+                <h5 class="mt-3">Paso 3</h5>
+                <p>La página te mostrará los detalles del certificado de confirmación</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div class="text-center footer1">
           <p>© 2025 Certificate Verification System</p>
           <p>This certificate's authenticity can be verified at this URL</p>
-        </footer>
+        </div>
       </div>
       
-      <script>
-        document.getElementById('certificate-id').addEventListener('keyup', function(event) {
-          if (event.key === 'Enter') {
-            const id = this.value.trim();
-            if (id) {
-              window.location.href = '/verify/' + id + '.html';
-            }
+    </div>
+
+
+    
+      <!-- footer-area-start -->
+    <footer>
+      <div class="py-4" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 my-2">
+                    <img class="logo_footer" src="assets/img/footer_2025/WEB_PI-67.png">
+                    <p class="text_footer">
+                        En Red Ciudadana trabajamos para fortalecer la transparencia,
+                        promover la participación ciudadana y construir un futuro más 
+                        justo e inclusivo para todos los guatemaltecos.
+                    </p>
+                    <div class="d-flex">
+                        <a href="https://www.facebook.com/Redciudadanagt"><img class="red_footer" src="assets/img/footer_2025/WEB_PI-62.png"></a>
+                        <a href="https://twitter.com/redxguate"><img class="red_footer" src="assets/img/footer_2025/WEB_PI-63.png"></a>
+                        <a href="https://www.instagram.com/redxguate/"><img class="red_footer" src="assets/img/footer_2025/WEB_PI-64.png"></a>
+                        <a href="https://www.linkedin.com/company/red-ciudadana"><img class="red_footer" src="assets/img/footer_2025/WEB_PI-65.png"></a>
+                        <a href="https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg"><img class="red_footer" src="assets/img/footer_2025/WEB_PI-66.png"></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 my-2 flex-container">
+                    <div class="links-footer text-left">
+                        <a href="/index.html">Inicio</a>
+                    </div>                          
+                </div>
+                <div class="col-lg-4 my-2 flex-container2">
+                    <div>
+                        <h4 class="title_footer">Dirección</h4>
+                        <p class="text_footer">Zona 10, Ciudad de Guatemala, Guatemala</p>
+                        <h4 class="title_footer">Correo Electrónico</h4>
+                        <p class="text_footer">info@redciudadana.org.gt</p>
+                        <h4 class="title_footer">Horario de Atención</h4>
+                        <p class="text_footer">Lunes a Viernes, 8:00am - 5:00pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="py-4" style="background-color: white;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <p class="text_footer_2">Asociación Civil Red Ciudadana 2025</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-1.12.4.min.js"></script>
+    
+    <script>
+      document.getElementById('certificate-id').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+          const id = this.value.trim();
+          if (id) {
+            window.location.href = '/verify/' + id + '.html';
           }
-        });
-      </script>
-    </body>
-    </html>
+        }
+      });
+    </script>
+
+    <!-- <script>
+      (function ($) {
+          ("use strict");
+          // Page loading
+          $(window).on("load", function () {
+              $("#preloader-active").delay(550).fadeOut("slow");
+              $("body").delay(550).css({
+                  overflow: "visible"
+              });
+              $("#onloadModal").modal("show");
+          });
+      
+      })(jQuery);
+    </script> -->
+  </body>
+</html>
   
